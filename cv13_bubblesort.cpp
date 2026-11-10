@@ -31,6 +31,15 @@ int main()
         }
     }
 
+    //reverse pole
+    int posledniIndex = 7;
+    for(int i = 0; i < 4; i++){
+        tmp = arr[i];
+        arr[i] = arr[posledniIndex];
+        arr[posledniIndex] = tmp;
+        posledniIndex--;
+    }
+
     
     for(int p : arr){
         cout << p << " ";
