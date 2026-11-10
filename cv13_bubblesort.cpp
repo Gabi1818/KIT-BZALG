@@ -5,7 +5,8 @@ using namespace std;
 int main()
 {
     int tmp;
-    int arr[] = {3,2,5,1,2,9,5,7};
+    //int arr[] = {3,2,5,1,2,9,5,7};
+    int arr[] = {3,2,2,1,2,9,5,7};
     bool jeSerazeno = false;
     
     for(int p : arr){
@@ -42,6 +43,7 @@ int main()
     }
     */
 
+    /*
     //odstraneni 2 duplicit
     for (int i = 1; i < 8; i++){
         if (arr[i] == arr[i-1]) //posun
@@ -51,6 +53,22 @@ int main()
             }
         }
     }
+    */
+
+    //odstraneni vsech duplicit
+    int velikost = 8;
+    
+    for (int i = 1; i < velikost; i++) {
+        if (arr[i] == arr[i-1]) {
+            for (int j = i; j < velikost - 1; j++) {
+                arr[j] = arr[j+1];
+            }
+    
+            velikost--;
+            i--;
+        }
+    }
+
 
     
     for(int p : arr){
