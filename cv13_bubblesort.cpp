@@ -31,6 +31,7 @@ int main()
         }
     }
 
+    /*
     //reverse pole
     int posledniIndex = 7;
     for(int i = 0; i < 4; i++){
@@ -38,6 +39,17 @@ int main()
         arr[i] = arr[posledniIndex];
         arr[posledniIndex] = tmp;
         posledniIndex--;
+    }
+    */
+
+    //odstraneni 2 duplicit
+    for (int i = 1; i < 8; i++){
+        if (arr[i] == arr[i-1]) //posun
+        {
+            for(int j = i; j < 8; j++){
+                arr[j-1] = arr[j];
+            }
+        }
     }
 
     
